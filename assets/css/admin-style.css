@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #0f2557;
+  --secondary-color: #375eb9;
+  --accent-color: #f0f6ff;
+  --text-dark: #333;
+  --text-light: #f8f9fa;
+  --danger: #dc3545;
+  --success: #198754;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  --border-radius: 0.375rem;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --transition: all 0.3s ease;
+  --font-primary: "Work Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+  font-family: var(--font-primary);
+  background-color: #f5f8fa;
+  color: var(--text-dark);
+}
+
+.content {
+  flex: 1;
+}
+
+/* Navbar styling */
+.admin-navbar {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  padding: 1rem 0;
+  box-shadow: var(--box-shadow);
+}
+
+.admin-navbar .navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.admin-navbar .navbar-brand img {
+  transition: var(--transition);
+}
+
+/* Sidebar styling */
+.admin-sidebar {
+  background: linear-gradient(
+    180deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.admin-sidebar .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .list-unstyled a {
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.admin-sidebar .list-unstyled a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.admin-sidebar .dropdown-menu {
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+  border: none;
+}
+
+.admin-sidebar .dropdown-item {
+  transition: var(--transition);
+}
+
+.admin-sidebar .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(3px);
+}
+
+/* Faculty Profile Styles */
+.tab-content {
+  min-height: 400px;
+}
+
+.nav-tabs .nav-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 1rem 1.5rem;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--secondary-color);
+  background-color: transparent;
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-color: transparent;
+  background-color: var(--accent-color);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: #e9ecef;
+  top: 0;
+  bottom: 0;
+  left: 16.66%;
+  margin-left: -0.5px;
+  z-index: -1;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+  .timeline-item::after {
+    left: 0;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
