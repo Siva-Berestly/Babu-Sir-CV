@@ -1,478 +1,1099 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <!-- Google Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/admin-style.css" />
 
     <link rel="icon" href="./assets/images/bdu-logo.gif" type="image/gif" />
-    <title>Faculty Profile - Bharathidasan University</title>
+    <title>Dr. M. Babu - Faculty Profile | Bharathidasan University</title>
     <!-- Navbar -->
-    <nav class="p-2 admin-navbar navbar-brand">
-        <div class="mx-4 py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <div class="d-none d-md-block">
-                <a class="btn text-white fw-bold text-decoration-none d-flex align-items-center gap-2"
-                    data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                    <span class="material-symbols-outlined"> menu </span> Menu
-                </a>
-            </div>
-            <div class="d-flex flex-md-row flex-column align-items-center justify-content-center gap-3">
-                <img src="assets/images/bdu-logo.gif" alt="logo" class="img-fluid"
-                    title="Bharathidasan University, Tiruchirappalli" alt="Bharathidasan University, Tiruchirappalli"
-                    width="90" />
-                <div class="d-flex flex-column">
-                    <h1 class="text-white text-center fw-bold fs-5">
-                        Bharathidasan University <br />
-                        <span class="fw-lighter">Tiruchirappalli</span>
-                    </h1>
-                </div>
-            </div>
-            <div class="d-flex gap-2 mx-2 text-white"></div>
-            <div class="d-block d-md-none text-dark rounded mt-4">
-                <a class="btn fw-bold text-decoration-none d-flex justify-content-center gap-2 text-white" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                    role="button" aria-controls="offcanvasExample">
-                    <span class="material-symbols-outlined"> menu </span> Menu
-                </a>
-            </div>
+    <nav class="p-2 admin-navbar navbar-brand container-fluid">
+      <div
+        class="mx-4 py-2 d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <div class="d-none d-md-block">
+          <a
+            class="btn text-white fw-bold text-decoration-none d-flex align-items-center gap-2"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+          >
+            <span class="material-symbols-outlined"> menu </span> Menu
+          </a>
         </div>
+        <div
+          class="d-flex flex-md-row flex-column align-items-center justify-content-center gap-3"
+        >
+          <img
+            src="assets/images/bdu-logo.gif"
+            alt="logo"
+            class="img-fluid"
+            title="Bharathidasan University, Tiruchirappalli"
+            alt="Bharathidasan University, Tiruchirappalli"
+            width="90"
+          />
+          <div class="d-flex flex-column">
+            <h1 class="text-white text-center fw-bold fs-5">
+              Bharathidasan University <br />
+              <span class="fw-lighter">Tiruchirappalli</span>
+            </h1>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mx-2 text-white"></div>
+        <div class="d-block d-md-none text-dark rounded mt-4">
+          <a
+            class="btn fw-bold text-decoration-none d-flex justify-content-center gap-2 text-white"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+          >
+            <span class="material-symbols-outlined"> menu </span> Menu
+          </a>
+        </div>
+      </div>
 
-        <div class="offcanvas offcanvas-start admin-sidebar" tabindex="-1"
-            id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header mt-3 mx-3 d-flex justify-content-between align-items-center">
-                <h5 class="fw-bold text-white">My Portfolio</h5>
-                <button type="button" class="btn-close bg-light mx-2" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <br />
-            <div class="offcanvas-body mt-1">
-                <ul class="list-unstyled d-flex flex-column justify-content-start gap-4 mx-3">
-                    <p class="text-center fw-bold text-white">Home</p>
-                    <li>
-                        <a href="index.html"
-                            class="fw-normal text-decoration-none text-white d-flex align-items-center gap-2">
-                            <span class="material-symbols-outlined"> home </span> Dashboard
-                        </a>
-                    </li>
-
-                    <!-- <li>
-              <a
-                href="settings.php"
-                class="fw-bold text-decoration-none text-white mt-3"
-              >
-                <i class="fa-solid fa-gear"></i> Settings
-              </a>
-            </li>
-    
+      <div
+        class="offcanvas offcanvas-start admin-sidebar"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div
+          class="offcanvas-header mt-3 mx-3 d-flex justify-content-between align-items-center"
+        >
+          <h5 class="fw-bold text-white">My Portfolio</h5>
+          <button
+            type="button"
+            class="btn-close bg-light mx-2"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <br />
+        <div class="offcanvas-body mt-1">
+          <ul
+            class="list-unstyled d-flex flex-column justify-content-start gap-4 mx-3"
+          >
+            <p class="text-center fw-bold text-white">Home</p>
             <li>
               <a
-                href="logout.php"
-                onclick="return(confirm('Are You sure want to logout'))"
-                class="fw-bold text-decoration-none text-white mt-3"
+                href="index.html"
+                class="fw-normal text-decoration-none text-white d-flex align-items-center gap-2"
               >
-                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                <span class="material-symbols-outlined"> home </span> Dashboard
               </a>
-            </li> -->
-                </ul>
-            </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid py-5">
-        <div class="container">
-            <!-- Faculty Profile Header -->
-            <div class="row mb-4">
-                <div class="col-lg-4 col-md-5 mb-4 mb-md-0">
-                    <div class="card shadow-sm border-0 h-100">
-                        <div class="card-body text-center p-4">
-                            <img src="assets/images/Babu_sir.jpg" alt="Faculty Photo" class="img-fluid rounded-3 mb-3"
-                                style="width: 150px; height: 150px; object-fit: cover" />
-                            <h5 class="fw-bold mb-1">Dr. M. Babu</h5>
-                            <p class="text-muted mb-1">Professor and Director i/c</p>
-                            <p class="text-muted small mb-3">
-                                Bharathidasan School of Management
-                            </p>
-                            <hr />
-                            <div class="d-flex flex-wrap justify-content-center gap-2">
-                                <a href="https://orcid.org/0000-0002-9480-8267" target="_blank"
-                                    class="btn btn-sm btn-primary d-flex align-items-center gap-1" data-bs-toggle="tooltip" title="ORCID ID">
-                                    <span class="material-symbols-outlined">identity_platform</span> ORCID
-                                </a>
-                                <a href="https://scholar.google.com/citations?user=DAq9q7wAAAAJ&hl=en&oi=ao" target="_blank"
-                                    class="btn btn-sm btn-primary d-flex align-items-center gap-1" data-bs-toggle="tooltip" title="Google Scholar">
-                                    <span class="material-symbols-outlined">school</span> Scholar
-                                </a>
-                                <a href="http://www.scopus.com/authid/detail.uri?authorId=57211323120" target="_blank"
-                                    class="btn btn-sm btn-primary d-flex align-items-center gap-1" data-bs-toggle="tooltip" title="Scopus ID">
-                                    <span class="material-symbols-outlined">for_you</span> Scopus
-                                </a>
-                                <a href="https://www.webofscience.com/wos/author/record/ACB5148-2022" target="_blank"
-                                    class="btn btn-sm btn-primary d-flex align-items-center gap-1" data-bs-toggle="tooltip" title="Publons ID">
-                                    <span class="material-symbols-outlined">link</span> Publons
-                                </a>
-                                <a href="https://vidwan.inflibnet.ac.in/myprofile#personal_information_panel" target="_blank" 
-                                    class="btn btn-sm btn-primary d-flex align-items-center gap-1" data-bs-toggle="tooltip" title="Vidwan(498618)">
-                                    <span class="material-symbols-outlined">lightbulb</span> Vidwan
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <!-- Faculty Profile Header -->
+        <div class="row mb-4">
+          <div class="col-lg-4 col-md-5 mb-4 mb-md-0">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body text-center p-4">
+                <img
+                  src="assets/images/Babu_sir.jpg"
+                  alt="Faculty Photo"
+                  class="img-fluid rounded-3 mb-3"
+                  style="width: 150px; height: 150px; object-fit: cover"
+                />
+                <h5 class="fw-bold mb-1">Dr. M. Babu</h5>
+                <p class="text-muted mb-1">Professor and Director i/c</p>
+                <p class="text-muted small mb-3">
+                  Bharathidasan School of Management
+                </p>
+                <hr />
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                  <a
+                    href="https://orcid.org/0000-0002-9480-8267"
+                    target="_blank"
+                    class="btn btn-sm btn-primary d-flex align-items-center gap-1"
+                    data-bs-toggle="tooltip"
+                    title="ORCID ID"
+                  >
+                    <span class="material-symbols-outlined"
+                      >identity_platform</span
+                    >
+                    ORCID
+                  </a>
+                  <a
+                    href="https://scholar.google.com/citations?user=DAq9q7wAAAAJ&hl=en&oi=ao"
+                    target="_blank"
+                    class="btn btn-sm btn-primary d-flex align-items-center gap-1"
+                    data-bs-toggle="tooltip"
+                    title="Google Scholar"
+                  >
+                    <span class="material-symbols-outlined">school</span>
+                    Scholar
+                  </a>
+                  <a
+                    href="http://www.scopus.com/authid/detail.uri?authorId=57211323120"
+                    target="_blank"
+                    class="btn btn-sm btn-primary d-flex align-items-center gap-1"
+                    data-bs-toggle="tooltip"
+                    title="Scopus ID"
+                  >
+                    <span class="material-symbols-outlined">for_you</span>
+                    Scopus
+                  </a>
+                  <a
+                    href="https://www.webofscience.com/wos/author/record/ACB5148-2022"
+                    target="_blank"
+                    class="btn btn-sm btn-primary d-flex align-items-center gap-1"
+                    data-bs-toggle="tooltip"
+                    title="Publons ID"
+                  >
+                    <span class="material-symbols-outlined">link</span> Publons
+                  </a>
+                  <a
+                    href="https://vidwan.inflibnet.ac.in/myprofile#personal_information_panel"
+                    target="_blank"
+                    class="btn btn-sm btn-primary d-flex align-items-center gap-1"
+                    data-bs-toggle="tooltip"
+                    title="Vidwan(498618)"
+                  >
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    Vidwan
+                  </a>
                 </div>
-                <div class="col-lg-8 col-md-7">
-                    <div class="card shadow-sm border-0 h-100">
-                        <div class="card-body p-4">
-                            <h2 class="fs-4 fw-bold text-primary mb-3">About</h2>
-                            <p class="mb-4">
-                                Dr. John Smith is a Professor of Computer Science at
-                                Bharathidasan University with over 15 years of experience in
-                                teaching and research. His primary research interests include
-                                artificial intelligence, machine learning, and data science
-                                applications in healthcare.
-                            </p>
-
-                            <div class="row mt-3">
-                                <div class="col-md-6 col-lg-3 mb-3">
-                                    <h6 class="fw-bold text-muted">Email</h6>
-                                    <p class="mb-0">example@bdu.ac.in</p>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-3">
-                                    <h6 class="fw-bold text-muted">Phone</h6>
-                                    <p class="mb-0">+91 98765 43210</p>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-3">
-                                    <h6 class="fw-bold text-muted">Office</h6>
-                                    <p class="mb-0">Room 305, CS Department</p>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-3">
-                                    <h6 class="fw-bold text-muted">Office Hours</h6>
-                                    <p class="mb-0">Mon-Fri, 10AM - 12PM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-8 col-md-7">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body p-4">
+                <h2 class="fs-4 fw-bold text-primary mb-3">About</h2>
+                <p class="mb-4">
+                  Dr. M. Babu is a Professor and Director i/c at Bharathidasan
+                  School of Management, Bharathidasan University,
+                  Tiruchirappalli. With over 15 years of teaching experience and
+                  21 years in research, his primary areas of specialization
+                  include Management, Financial Markets and Services, and
+                  Behavioral Finance.
+                </p>
 
-            <!-- Tabbed Content -->
-            <div class="card shadow-sm border-0">
-                <div class="card-body p-0">
-                    <ul class="nav nav-tabs" id="profileTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="education-tab" data-bs-toggle="tab"
-                                data-bs-target="#education" type="button" role="tab" aria-controls="education"
-                                aria-selected="true">
-                                Education
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research"
-                                type="button" role="tab" aria-controls="research" aria-selected="false">
-                                Research
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="publications-tab" data-bs-toggle="tab"
-                                data-bs-target="#publications" type="button" role="tab" aria-controls="publications"
-                                aria-selected="false">
-                                Publications
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects"
-                                type="button" role="tab" aria-controls="projects" aria-selected="false">
-                                Projects
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="teaching-tab" data-bs-toggle="tab" data-bs-target="#teaching"
-                                type="button" role="tab" aria-controls="teaching" aria-selected="false">
-                                Teaching
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="tab-content p-4" id="profileTabsContent">
-                        <!-- Education Tab -->
-                        <div class="tab-pane fade show active" id="education" role="tabpanel"
-                            aria-labelledby="education-tab">
-                            <h3 class="fs-5 fw-bold mb-4">Educational Qualifications</h3>
-                            <div class="timeline">
-                                <div class="timeline-item mb-4">
-                                    <div class="row">
-                                        <div class="col-md-3 col-lg-2 mb-2">
-                                            <span class="badge bg-primary">2005 - 2010</span>
-                                        </div>
-                                        <div class="col-md-9 col-lg-10">
-                                            <h5 class="fs-6 fw-bold">Ph.D. in Computer Science</h5>
-                                            <p class="mb-0">Stanford University, USA</p>
-                                            <p class="text-muted small">
-                                                Thesis: Advanced Machine Learning Algorithms for
-                                                Healthcare Data Analysis
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-item mb-4">
-                                    <div class="row">
-                                        <div class="col-md-3 col-lg-2 mb-2">
-                                            <span class="badge bg-primary">2003 - 2005</span>
-                                        </div>
-                                        <div class="col-md-9 col-lg-10">
-                                            <h5 class="fs-6 fw-bold">M.S. in Computer Science</h5>
-                                            <p class="mb-0">
-                                                Massachusetts Institute of Technology, USA
-                                            </p>
-                                            <p class="text-muted small">
-                                                Specialization in Artificial Intelligence
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-item mb-4">
-                                    <div class="row">
-                                        <div class="col-md-3 col-lg-2 mb-2">
-                                            <span class="badge bg-primary">1999 - 2003</span>
-                                        </div>
-                                        <div class="col-md-9 col-lg-10">
-                                            <h5 class="fs-6 fw-bold">
-                                                B.Tech in Computer Science and Engineering
-                                            </h5>
-                                            <p class="mb-0">
-                                                Indian Institute of Technology, Delhi
-                                            </p>
-                                            <p class="text-muted small">
-                                                First Class with Distinction
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Research Tab -->
-                        <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
-                            <h3 class="fs-5 fw-bold mb-4">Research Interests</h3>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Artificial Intelligence</h5>
-                                            <p class="card-text">
-                                                Focusing on intelligent systems that can perceive
-                                                their environment and take actions to maximize
-                                                success.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Machine Learning</h5>
-                                            <p class="card-text">
-                                                Developing algorithms that improve automatically
-                                                through experience and data collection.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Healthcare Informatics</h5>
-                                            <p class="card-text">
-                                                Applications of data science and AI in healthcare
-                                                systems for improved diagnosis and treatment.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Natural Language Processing</h5>
-                                            <p class="card-text">
-                                                Research on computational techniques for analyzing and
-                                                synthesizing human language.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Publications Tab -->
-                        <div class="tab-pane fade" id="publications" role="tabpanel" aria-labelledby="publications-tab">
-                            <h3 class="fs-5 fw-bold mb-4">Selected Publications</h3>
-                            <div class="mb-4">
-                                <h5 class="fs-6 fw-bold">Journal Articles</h5>
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0">
-                                        Smith J., Johnson A., Kumar P. (2023). "Deep Learning
-                                        Approaches for Medical Image Analysis."
-                                        <em>Journal of Biomedical Informatics</em>, 45(3),
-                                        235-247.
-                                    </li>
-                                    <li class="list-group-item border-0">
-                                        Smith J., Williams B. (2022). "A Comparative Study of
-                                        Machine Learning Algorithms for Disease Prediction."
-                                        <em>IEEE Transactions on Medical Imaging</em>, 34(2),
-                                        128-142.
-                                    </li>
-                                    <li class="list-group-item border-0">
-                                        Lee S., Smith J., Chen M. (2021). "Natural Language
-                                        Processing for Electronic Health Records."
-                                        <em>Artificial Intelligence in Medicine</em>, 67(4),
-                                        189-203.
-                                    </li>
-                                </ol>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="fs-6 fw-bold">Conference Papers</h5>
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item border-0">
-                                        Smith J., Brown T. (2023). "Transformer-Based Models for
-                                        Clinical Text Analysis." In
-                                        <em>Proceedings of the International Conference on
-                                            Artificial Intelligence in Healthcare (ICAIH)</em>, Toronto, Canada, pp.
-                                        312-324.
-                                    </li>
-                                    <li class="list-group-item border-0">
-                                        Garcia R., Smith J. (2022). "Explainable AI for Medical
-                                        Diagnosis." In
-                                        <em>IEEE International Conference on Healthcare
-                                            Informatics</em>, Boston, MA, pp. 178-186.
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <!-- Projects Tab -->
-                        <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
-                            <h3 class="fs-5 fw-bold mb-4">Research Projects</h3>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <span class="badge bg-primary mb-2">2021-Present</span>
-                                            <h5 class="card-title">AI-Enabled Diagnostic System</h5>
-                                            <p class="card-text">
-                                                Developing an intelligent system for early detection
-                                                of diseases using machine learning algorithms. Funded
-                                                by the Department of Science and Technology.
-                                            </p>
-                                            <p class="text-muted small mb-0">
-                                                Role: Principal Investigator
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <span class="badge bg-primary mb-2">2019-2022</span>
-                                            <h5 class="card-title">
-                                                Smart Healthcare Monitoring System
-                                            </h5>
-                                            <p class="card-text">
-                                                Created an IoT-based system for remote patient
-                                                monitoring and health status prediction. Collaborated
-                                                with local hospitals for implementation.
-                                            </p>
-                                            <p class="text-muted small mb-0">
-                                                Role: Co-Principal Investigator
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <div class="card-body">
-                                            <span class="badge bg-primary mb-2">2017-2019</span>
-                                            <h5 class="card-title">
-                                                Natural Language Understanding for Regional Languages
-                                            </h5>
-                                            <p class="card-text">
-                                                Developed NLP models for processing and understanding
-                                                regional Indian languages. Created a comprehensive
-                                                corpus for linguistic research.
-                                            </p>
-                                            <p class="text-muted small mb-0">
-                                                Role: Principal Investigator
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Teaching Tab -->
-                        <div class="tab-pane fade" id="teaching" role="tabpanel" aria-labelledby="teaching-tab">
-                            <h3 class="fs-5 fw-bold mb-4">Courses Taught</h3>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Course Code</th>
-                                            <th>Course Title</th>
-                                            <th>Program</th>
-                                            <th>Level</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>CS501</td>
-                                            <td>Introduction to Artificial Intelligence</td>
-                                            <td>B.Tech Computer Science</td>
-                                            <td>UG</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CS605</td>
-                                            <td>Machine Learning</td>
-                                            <td>M.Tech Computer Science</td>
-                                            <td>PG</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CS702</td>
-                                            <td>Advanced Data Mining</td>
-                                            <td>M.Tech Computer Science</td>
-                                            <td>PG</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CS801</td>
-                                            <td>Research Methods in Computer Science</td>
-                                            <td>Ph.D. Computer Science</td>
-                                            <td>Doctoral</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row mt-3">
+                  <div class="col-md-6 col-lg-3 mb-3">
+                    <h6 class="fw-bold text-muted">Email</h6>
+                    <p class="mb-0">babuphd@gmail.com</p>
+                    <p class="mb-0">drbabu@bdu.ac.in</p>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-3">
+                    <h6 class="fw-bold text-muted">Phone</h6>
+                    <p class="mb-0">+91 431 2407072 (Office)</p>
+                    <p class="mb-0">+91 9789430530 (Mobile)</p>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-3">
+                    <h6 class="fw-bold text-muted">Office</h6>
+                    <p class="mb-0">Bharathidasan School of Management</p>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-3">
+                    <h6 class="fw-bold text-muted">Citation Info</h6>
+                    <p class="mb-0">h-index: 8</p>
+                    <p class="mb-0">Citations: 310+</p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+
+        <!-- Tabbed Content -->
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-0">
+            <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="education-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#education"
+                  type="button"
+                  role="tab"
+                  aria-controls="education"
+                  aria-selected="true"
+                >
+                  Education
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="research-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#research"
+                  type="button"
+                  role="tab"
+                  aria-controls="research"
+                  aria-selected="false"
+                >
+                  Research
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="publications-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#publications"
+                  type="button"
+                  role="tab"
+                  aria-controls="publications"
+                  aria-selected="false"
+                >
+                  Publications
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="experience-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#experience"
+                  type="button"
+                  role="tab"
+                  aria-controls="experience"
+                  aria-selected="false"
+                >
+                  Experience
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="projects-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#projects"
+                  type="button"
+                  role="tab"
+                  aria-controls="projects"
+                  aria-selected="false"
+                >
+                  Projects
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="teaching-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#teaching"
+                  type="button"
+                  role="tab"
+                  aria-controls="teaching"
+                  aria-selected="false"
+                >
+                  Teaching
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="awards-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#awards"
+                  type="button"
+                  role="tab"
+                  aria-controls="awards"
+                  aria-selected="false"
+                >
+                  Awards
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="certifications-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#certifications"
+                  type="button"
+                  role="tab"
+                  aria-controls="certifications"
+                  aria-selected="false"
+                >
+                  Certifications
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content p-4" id="profileTabsContent">
+              <!-- Education Tab -->
+              <div
+                class="tab-pane fade show active"
+                id="education"
+                role="tabpanel"
+                aria-labelledby="education-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Educational Qualifications</h3>
+                <div class="timeline">
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2008</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Ph.D. in Management</h5>
+                        <p class="mb-0">Bharathidasan University</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2001</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">
+                          M.B.A in Business Administration
+                        </h5>
+                        <p class="mb-0">University of Madras</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">1999</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">B.Com in Commerce</h5>
+                        <p class="mb-0">Bharathidasan University</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Research Tab -->
+              <div
+                class="tab-pane fade"
+                id="research"
+                role="tabpanel"
+                aria-labelledby="research-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Research Interests</h3>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Management</h5>
+                        <p class="card-text">
+                          Research on management practices, organizational
+                          behavior, and strategic management with focus on
+                          Indian organizations.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Financial Markets and Services
+                        </h5>
+                        <p class="card-text">
+                          Studies on stock market efficiency, commodity markets,
+                          mutual funds, and capital market analysis in the
+                          Indian context.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Behavioral Finance</h5>
+                        <p class="card-text">
+                          Investigation of investor behavior, decision-making
+                          biases, and psychological aspects of financial
+                          decision making.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Cryptocurrency and Sustainable Finance
+                        </h5>
+                        <p class="card-text">
+                          Research on blockchain technology, cryptocurrency
+                          markets, and sustainable investment with focus on
+                          environmental impact.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="fs-5 fw-bold mb-4 mt-3">Research Supervision</h3>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Program</th>
+                        <th>Completed</th>
+                        <th>Ongoing</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ph.D.</td>
+                        <td>09</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>M.Phil.</td>
+                        <td>12</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>Project PG</td>
+                        <td>90</td>
+                        <td>11</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Publications Tab -->
+              <div
+                class="tab-pane fade"
+                id="publications"
+                role="tabpanel"
+                aria-labelledby="publications-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Publication Record</h3>
+                <div class="table-responsive mb-4">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Type</th>
+                        <th>Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Research Papers in Refereed Journals</td>
+                        <td>112</td>
+                      </tr>
+                      <tr>
+                        <td>Papers published in Edited Books</td>
+                        <td>34</td>
+                      </tr>
+                      <tr>
+                        <td>Books Published</td>
+                        <td>01</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h5 class="fs-6 fw-bold">
+                  Citation Record (as per Google Scholar)
+                </h5>
+                <div class="table-responsive mb-4">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Metric</th>
+                        <th>Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>h-index</td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>i10 index</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>Total Citations</td>
+                        <td>310</td>
+                      </tr>
+                      <tr>
+                        <td>Scopus H-Index</td>
+                        <td>5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h5 class="fs-6 fw-bold">Selected Recent Publications</h5>
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item border-0">
+                    Kathiravan, C., Selvam, M., Maniam, B., Dana, L.P., and
+                    Babu, M. (2023). "The Effects of Crude Oil Price Surprises
+                    on National Income: Evidence from India" Energies 16, no. 3:
+                    1148.
+                  </li>
+                  <li class="list-group-item border-0">
+                    Begam, M. R., Babu, M., & Sulphey, M. M. (2023). "Examining
+                    the relationship between stock returns and investor
+                    sentiments: the moderating effect of weather patterns."
+                    Vision: The Journal of Business Perspective.
+                  </li>
+                  <li class="list-group-item border-0">
+                    Anandhabalaji, V., Babu, M., & Brintha, R. (2024). "Energy
+                    Consumption by Cryptocurrency: A bibliometric analysis
+                    revealing research trends and insights." Energy Nexus,
+                    100274.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Experience Tab -->
+              <div
+                class="tab-pane fade"
+                id="experience"
+                role="tabpanel"
+                aria-labelledby="experience-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Professional Experience</h3>
+                <div class="timeline">
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2019 - Present</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Director i/c</h5>
+                        <p class="mb-0">
+                          Bharathidasan School of Management, Bharathidasan
+                          University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2024 - Present</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Dean</h5>
+                        <p class="mb-0">
+                          Faculty of Management, Bharathidasan University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2023 - Present</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Programme Coordinator</h5>
+                        <p class="mb-0">
+                          MBA (Logistics and Supply Chain Management),
+                          Bharathidasan University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2023 - 2024</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Chair</h5>
+                        <p class="mb-0">
+                          School of Business Studies, Bharathidasan University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2023 - Present</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Professor</h5>
+                        <p class="mb-0">
+                          Bharathidasan School of Management, Bharathidasan
+                          University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2020 - 2023</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Associate Professor</h5>
+                        <p class="mb-0">
+                          Bharathidasan School of Management, Bharathidasan
+                          University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2016 - 2020</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Assistant Professor</h5>
+                        <p class="mb-0">
+                          Bharathidasan School of Management, Bharathidasan
+                          University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 mb-2">
+                        <span class="badge bg-primary">2008 - 2016</span>
+                      </div>
+                      <div class="col-md-9 col-lg-10">
+                        <h5 class="fs-6 fw-bold">Assistant Professor</h5>
+                        <p class="mb-0">
+                          Department of Commerce and Financial Studies,
+                          Bharathidasan University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects Tab -->
+              <div
+                class="tab-pane fade"
+                id="projects"
+                role="tabpanel"
+                aria-labelledby="projects-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Funded Research Projects</h3>
+                <div class="row">
+                  <div class="col-md-12 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                      <div class="card-body">
+                        <span class="badge bg-primary mb-2">2011-2013</span>
+                        <h5 class="card-title">
+                          Testing the Weak Form Efficiency of the Indian Capital
+                          Market –A Sectoral Approach
+                        </h5>
+                        <p class="card-text">
+                          UGC funded project to evaluate the efficiency of
+                          Indian capital markets by analyzing sectoral data.
+                        </p>
+                        <p class="text-muted small mb-0">
+                          Budget: Rs. 4,00,700
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                      <div class="card-body">
+                        <span class="badge bg-primary mb-2">2014-2015</span>
+                        <h5 class="card-title">
+                          Consumer Awareness and Satisfaction of Banking
+                          Services: An Empirical Study
+                        </h5>
+                        <p class="card-text">
+                          IIPA funded consultancy project examining consumer
+                          satisfaction with banking services.
+                        </p>
+                        <p class="text-muted small mb-0">
+                          Budget: Rs. 3,25,000
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Teaching Tab -->
+              <div
+                class="tab-pane fade"
+                id="teaching"
+                role="tabpanel"
+                aria-labelledby="teaching-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Teaching Experience</h3>
+                <p>Total Teaching & Research Experience: 15 Years 08 Months</p>
+
+                <h5 class="fs-6 fw-bold mt-4">Academic Bodies</h5>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Position</th>
+                        <th>Institution</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Board of Studies Member</td>
+                        <td>
+                          Department of Commerce and Financial Studies,
+                          Bharathidasan University
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Board of Studies Member</td>
+                        <td>Mahendra Arts and Science College</td>
+                      </tr>
+                      <tr>
+                        <td>Board of Studies Member</td>
+                        <td>
+                          Bharathidasan School of Management, Bharathidasan
+                          University
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Chairman</td>
+                        <td>
+                          Bharathidasan School of Management, Bharathidasan
+                          University
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Chairman</td>
+                        <td>Bharathidasan University (MBA)</td>
+                      </tr>
+                      <tr>
+                        <td>Board of Studies Member</td>
+                        <td>Bharathidasan University (BBA)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Awards Tab -->
+              <div
+                class="tab-pane fade"
+                id="awards"
+                role="tabpanel"
+                aria-labelledby="awards-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Awards & Recognition</h3>
+                <div class="timeline">
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-2 mb-2">
+                        <span class="badge bg-primary">2021</span>
+                      </div>
+                      <div class="col-md-10">
+                        <h5 class="fs-6 fw-bold">Best Researcher Award</h5>
+                        <p class="mb-0">
+                          Awarded by EET CRS Research Wing for Excellence in
+                          Professional Education and Industry at 6th Academic
+                          Brand Awards
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-2 mb-2">
+                        <span class="badge bg-primary">2020</span>
+                      </div>
+                      <div class="col-md-10">
+                        <h5 class="fs-6 fw-bold">Best Research Paper Award</h5>
+                        <p class="mb-0">
+                          For "Co Movement of Indian Stock market and SAARC
+                          Nation Stock market" at the International Conference
+                          organized by Sri Sai Ram Institute of Management
+                          Studies
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-2 mb-2">
+                        <span class="badge bg-primary">2020</span>
+                      </div>
+                      <div class="col-md-10">
+                        <h5 class="fs-6 fw-bold">Best Research Paper Award</h5>
+                        <p class="mb-0">
+                          For "COVID 19 and its effect on Agriculture Supply
+                          Chain" at the National Web Conference organized by
+                          Nehru Arts and Science College, Coimbatore
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="timeline-item mb-4">
+                    <div class="row">
+                      <div class="col-md-2 mb-2">
+                        <span class="badge bg-primary">2019</span>
+                      </div>
+                      <div class="col-md-10">
+                        <h5 class="fs-6 fw-bold">Best Researcher Award</h5>
+                        <p class="mb-0">
+                          Awarded by Vivekananda College of Arts and Science for
+                          Women, Tiruchengode, Namakkal, Tamilnadu
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="fs-6 fw-bold mt-4">Professional Memberships</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    Indian Commerce Association, Bhubaneswar - Life Member
+                  </li>
+                  <li class="list-group-item">
+                    World Economics Association, United Kingdom - Life Member
+                  </li>
+                  <li class="list-group-item">
+                    International Management Research & Technology Consortium -
+                    Life Member
+                  </li>
+                  <li class="list-group-item">
+                    Indian Accounting Association - Life Member
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Certifications Tab -->
+              <div
+                class="tab-pane fade"
+                id="certifications"
+                role="tabpanel"
+                aria-labelledby="certifications-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Professional Certifications</h3>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Name of the Course</th>
+                        <th>Year</th>
+                        <th>Agency</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Green Investment: Renewable Energy</td>
+                        <td>2021</td>
+                        <td>Asian Development Bank Institute</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          The Role of Central Banks and Financial Supervisory
+                          Authorities in Governing Sustainable Finance
+                        </td>
+                        <td>2021</td>
+                        <td>Asian Development Bank Institute</td>
+                      </tr>
+                      <tr>
+                        <td>Climate Change and Sovereign Risk</td>
+                        <td>2021</td>
+                        <td>Asian Development Bank Institute</td>
+                      </tr>
+                      <tr>
+                        <td>Governing Sustainable Finance</td>
+                        <td>2021</td>
+                        <td>Asian Development Bank Institute</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Sustainable and Quality Infrastructure Beyond the
+                          Covid-19 Pandemic
+                        </td>
+                        <td>2022</td>
+                        <td>Asian Development Bank Institute</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Contact Tab -->
+              <div
+                class="tab-pane fade"
+                id="contact"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <h3 class="fs-5 fw-bold mb-4">Contact Information</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <span
+                            class="material-symbols-outlined align-middle me-2"
+                            >location_on</span
+                          >
+                          Address
+                        </h5>
+                        <p class="card-text">
+                          Bharathidasan School of Management,<br />
+                          Bharathidasan University,<br />
+                          Tiruchirappalli - 620 024<br />
+                          Tamil Nadu, India
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <span
+                            class="material-symbols-outlined align-middle me-2"
+                            >call</span
+                          >
+                          Phone
+                        </h5>
+                        <p class="card-text">
+                          Office: +91 431 2407072<br />
+                          Mobile: +91 9789430530
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <span
+                            class="material-symbols-outlined align-middle me-2"
+                            >mail</span
+                          >
+                          Email
+                        </h5>
+                        <p class="card-text">
+                          babuphd@gmail.com<br />
+                          drbabu@bdu.ac.in
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <span
+                            class="material-symbols-outlined align-middle me-2"
+                            >link</span
+                          >
+                          Academic Profiles
+                        </h5>
+                        <div class="d-flex flex-column gap-2">
+                          <a
+                            href="https://orcid.org/0000-0002-9480-8267"
+                            target="_blank"
+                            class="text-decoration-none"
+                            >ORCID: 0000-0002-9480-8267</a
+                          >
+                          <a
+                            href="https://scholar.google.com/citations?user=DAq9q7wAAAAJ&hl=en&oi=ao"
+                            target="_blank"
+                            class="text-decoration-none"
+                            >Google Scholar</a
+                          >
+                          <a
+                            href="http://www.scopus.com/authid/detail.uri?authorId=57211323120"
+                            target="_blank"
+                            class="text-decoration-none"
+                            >Scopus ID: 57211323120</a
+                          >
+                          <a
+                            href="https://www.webofscience.com/wos/author/record/ACB5148-2022"
+                            target="_blank"
+                            class="text-decoration-none"
+                            >Publons</a
+                          >
+                          <a
+                            href="https://vidwan.inflibnet.ac.in/myprofile#personal_information_panel"
+                            target="_blank"
+                            class="text-decoration-none"
+                            >Vidwan ID: 498618</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
 
+    <!-- Initialize tooltips -->
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
 </html>
